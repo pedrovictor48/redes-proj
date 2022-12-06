@@ -81,8 +81,6 @@ def escolhePalavra():
     return palavra_envio.upper()
 
 if __name__ ==  "__main__":
-    hostname = socket.gethostname()
-    ip_address = socket.gethostbyname(hostname)
-    print("IP Server", ip_address)
+
     PALAVRA_DIA = escolhePalavra()
     ouvir()
