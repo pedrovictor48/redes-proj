@@ -73,10 +73,18 @@ def ouvir():
         nova_thread.start()
         lista_thread.append(nova_thread)
 
+def escolhePalavra():
+    while(True):
+        palavra_envio = input("Digite a palavra do dia (5 letras): ")
+        if (len(palavra_envio) == 5):
+            break
+        else:
+            print('A palavra precisa ter 5 letras.')
+    return palavra_envio.upper()
 
 if __name__ ==  "__main__":
     hostname = socket.gethostname()
     ip_address = socket.gethostbyname(hostname)
     print("IP Server", ip_address)
-    PALAVRA_DIA = input("Digite a palavra do dia: ")
+    PALAVRA_DIA = escolhePalavra()
     ouvir()
