@@ -25,6 +25,7 @@ def printPalavra(chute, palavra):
             for j in range(len(chute)):
                 if chute[j] == letra and verde[j] == False and amarelo[j] == False:
                     amarelo[j] = True
+                    break
     
     retorno = ''
     for i in range(len(chute)):
