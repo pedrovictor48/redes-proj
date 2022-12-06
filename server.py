@@ -5,7 +5,6 @@ import json
 HOST = ''
 PORTA = 12000
 global PALAVRA_DIA
-lista_thread = []
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind(('', PORTA))
@@ -71,7 +70,6 @@ def ouvir():
         #client.timeout(60)
         nova_thread = threading.Thread(target=ouvirCliente, args=(client, adress))
         nova_thread.start()
-        lista_thread.append(nova_thread)
 
 def escolhePalavra():
     while(True):
